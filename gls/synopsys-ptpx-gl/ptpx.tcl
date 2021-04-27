@@ -97,11 +97,13 @@ report_switching_activity \
 report_power -nosplit \
   > reports/$appdesname.power.rpt
 
-report_power -nosplit -hierarchy \
+report_power -nosplit -hierarchy -leaf \
   > reports/$appdesname.power.hier.rpt
 
-report_power -nosplit -hierarchy \
-  > ../results/$designtype/$appname.power.hier.rpt
+set underscore "_"
+
+report_power -nosplit -hierarchy -leaf \
+  > ../results/$designtype$underscore$experiment/$appname.power.hier.rpt
 
 exit
 

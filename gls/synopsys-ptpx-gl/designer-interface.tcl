@@ -10,6 +10,7 @@
 set ptpx_design_name        pe_tile_new_unq1
 set appname                 $::env(APPNAME)
 set designtype              $::env(DESIGNTYPE)
+set experiment              $::env(EXPERIMENT)
 set appdesname              ${appname}_${designtype}
 
 
@@ -31,7 +32,7 @@ set ptpx_extra_link_libraries     nldm_nems40tt.db
 set ptpx_gl_netlist         $designtype/design.vcs.v
 set ptpx_sdc                design.pt.sdc
 set ptpx_spef               $designtype/design.spef.gz
-set ptpx_saif               ../outputs/$appname.saif
+set ptpx_saif               ../outputs/$appname.saif.gz
 
 # The strip path must be defined!
 #
